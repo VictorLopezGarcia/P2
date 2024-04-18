@@ -1,3 +1,12 @@
+/*
+ * TITLE: PROGRAMMING II LABS
+ * SUBTITLE: Practical 2
+ * AUTHOR 1: López García, Víctor LOGIN 1: victor.lopezg@udc.es
+ * AUTHOR 2: García Iglesias, Iago LOGIN 2: iago.garcia.iglesias@udc.es
+ * GROUP: 2.4
+ * DATE: 12 / 04 / 2024
+ */
+
 #ifndef PRO2_2023_P2_TYPES_H
 #define PRO2_2023_P2_TYPES_H
 
