@@ -19,6 +19,7 @@
     typedef int tPosS;
     typedef tSong tItemS;
 
+
     typedef struct tListS{
         tItemS canciones[MAX_ELEMENTOS];
         tPosS ultPos;

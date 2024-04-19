@@ -51,7 +51,7 @@ tPosU previousU(tPosU p, tListU L){ //Recorre desde el nodo inicial hasta encont
 }
 
 bool insertItemU(tItemU d, tListU *L){
-    tPosU node = malloc(sizeof(struct Node)); //Asigna espacio de memoria para el nuevo item
+    tPosU node = malloc(sizeof(struct Node));//Asigna espacio de memoria para el nuevo item
     if(node == NULLU) return false;
     else{                                         // Añade el item en la posicion que le corresponde dependiendo de la pasada por parametro
         node -> user = d;
@@ -59,6 +59,7 @@ bool insertItemU(tItemU d, tListU *L){
         if(isEmptyListU(*L) ){
             *L = node;
         }
+
         else{
            tPosU temp = *L;
             if(strcmp(temp->user.userName, d.userName)>0){
@@ -72,6 +73,8 @@ bool insertItemU(tItemU d, tListU *L){
                 temp->next = node;
             }
         }
+        node->user.songList = malloc(sizeof(tListS));
+        createEmptyListS(node->user.songList);
         return true;
     }
 }
@@ -84,6 +87,7 @@ void deleteAtPositionU(tPosU p, tListU *L){  //asigna al hijo del padre su propi
         else{
             previousU(p, *L)->next = p->next;
         }
+        free(p->user.songList);
         free(p); //Posteriormente libera la memoria asignada a este item
     }
 }

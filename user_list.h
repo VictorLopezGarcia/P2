@@ -19,11 +19,12 @@
 
 typedef struct Node *tPosU;
 
+
 typedef struct tItemU{
     tUserName userName;
     tPlayTime totalPlayTime;
     tUserCategory userCategory;
-    tListS songList;
+    tListS* songList;
 }tItemU;
 
 typedef struct Node{
@@ -32,6 +33,7 @@ typedef struct Node{
 }Node;
 
 typedef tPosU tListU;
+
 
 
 void createEmptyListU(tListU *L);
@@ -45,6 +47,5 @@ void deleteAtPositionU(tPosU p, tListU *L);
 tItemU getItemU(tPosU p, tListU L);
 void updateItemU(tItemU d , tPosU p, tListU *L);
 tPosU findItemU(tUserName d, tListU L);
-
 
 #endif
